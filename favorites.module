@@ -1,0 +1,52 @@
+
+
+<?php
+function favorites_menu() {
+    $items = array();
+    $items['favorite_movies'] = array(
+        'title' => 'Favorite Movies',
+        'page callback' => 'movies',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['favorite_books'] = array(
+        'title' => 'Favorite Books',
+        'page callback' => 'books',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+
+    $items['favorite_songs'] = array(
+        'title' => 'Favorite Songs',
+        'page callback' => 'songs',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+
+}
+
+function movies() {
+    return '<ul>
+        <li>American Beauty</li>
+        <li>Blade Runner</li>
+        <li>Unbearable Lightness of Being</li>
+        <li>2001: A Space Odyssey</li>
+    </ul>';
+}
+
+function books() {
+    return '<ul>
+        <li>A Tree Grows in Brooklyn</li>
+        <li>Fun Home</li>
+        <li>Their Eyes Were Watching God</li>
+    </ul>';
+}
+
+function songs() {
+    return '<ul>
+        <li>Bolero</li>
+        <li>Hey Mr. Tambourine Man</li>
+        <li>Come Pick Me Up</li>
+    </ul>';
+}
